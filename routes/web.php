@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/clientes', 'UserController@index');
+Route::resource('/dependencias', 'DependenciasController');
 
 Auth::routes();
 
