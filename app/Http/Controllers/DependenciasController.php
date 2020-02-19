@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Dependencia;
+use Illuminate\Support\Facades\Hash;
 
 class DependenciasController extends Controller
 {
@@ -38,7 +39,7 @@ class DependenciasController extends Controller
         $dependencia = new Dependencia;
         $dependencia->depe_nombre = $request->nombre;
         $dependencia->depe_email = $request->email;
-        $dependencia->depe_password = $request->password;
+        $dependencia->depe_password = Hash::make($request->password);
         $dependencia->save();
 
         return $dependencia;
