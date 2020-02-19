@@ -9,9 +9,12 @@
 <body>
     <h1>Captura de una nueva dependecia</h1>
     <form>
-        <input type="text" name="nombre">
-        <input type="text" name="email">
-        <input type="password" name="password">
+        <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="Ingrese el nombre">
+        <label>Correo Electronico</label>
+        <input type="text" name="email" placeholder="Ingrese el correo">
+        <label>Contraseña</label>
+        <input type="password" name="password" placeholder="Ingrese una contraseña">
         <input type="submit" value="Guardar">
 
     </form>
