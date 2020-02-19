@@ -16,8 +16,9 @@ class DependenciasController extends Controller
     public function index()
     {
         $dependencias = Dependencia::all();
-        return view('dependencia.index', compact('dependencias'));
-        
+       /* dd($dependencias);*/
+        return view('dependencias.index', compact('dependencias'));
+
     }
 
     /**

@@ -15,9 +15,17 @@
             <td>Correo</td>
         </thead>
         <tbody>
+            @foreach ($dependencias as $depe)   
             <tr>
-                <td></td>
+            <td>{{$depe->depe_depe}}</td>
+            <td>{{$depe->depe_nombre}}</td>
+            <td>{{$depe->depe_email}}</td>
+            <td>
+                <button>Editar</button>
+                <button>Eliminar</button>
+            </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </body>
