@@ -8,7 +8,10 @@
 </head>
 <body>
     <h1>Captura de una nueva dependecia</h1>
-    <form>
+    <form action="{{route('dependencias.store')}}" method="POST">
+        @csrf
+
+        
         <label>Nombre</label>
         <input type="text" name="nombre" placeholder="Ingrese el nombre">
         <label>Correo Electronico</label>

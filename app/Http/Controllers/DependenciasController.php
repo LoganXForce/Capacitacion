@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Dependencia;
 
 class DependenciasController extends Controller
 {
@@ -34,7 +35,14 @@ class DependenciasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dependencia = new Dependencia;
+        $dependencia->depe_nombre = $request->nombre;
+        $dependencia->depe_email = $request->email;
+        $dependencia->depe_password = $request->password;
+        $dependencia->save();
+
+        return $dependencia;
+        
     }
 
     /**
